@@ -74,7 +74,8 @@ def deleteCrossOffButton():
     while count < myList.size(): # myList.size() : size shows the num of items in the list
         if myList.itemcget(count, "fg") == "blue":   #itemcget: when we want to have info about an item
             myList.delete(myList.index(count))
-        count +=1    
+        else:    
+         count +=1    
 
 
 #Add buttons
@@ -82,8 +83,7 @@ deleteButton = Button(buttonFram, text="Delete Item" , command=deleteButton)
 addButton = Button(buttonFram, text="Add Item" , command=addButton)
 crossOffButton = Button(buttonFram, text="Cross Off Item" , command=crossOffButton)
 uncrossButton = Button(buttonFram, text="Uncross Item" , command=uncrossButton)
-deleteCrossOffButton = Button(buttonFram, text="Dlete Crossed" , command=deleteCrossOffButton)
-
+deleteCrossOffButton = Button(buttonFram, text="Delete Crossed" , command=deleteCrossOffButton)
 
 
 deleteButton.grid(row=0 , column=0)
